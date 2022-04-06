@@ -6,6 +6,8 @@ def division(a, b):
         return k-1
     else:
         return k
+    
+    
 n,k = input().split()
 n = int(n)
 k = int(k)
