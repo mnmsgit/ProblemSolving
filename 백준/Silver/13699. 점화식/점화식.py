@@ -7,9 +7,6 @@ def function_t(num):
     result = 0
     if num == 0:
         return 1
-    if num == 1:
-        result_memo[1] = 1
-        return 1
     for k in range(num):
         if result_memo[k] == 0 and result_memo[num - 1 - k] == 0:
             result += function_t(k) * function_t(num - 1 - k)
