@@ -1,3 +1,7 @@
+"""
+딕셔너리를 이용해 푸는 그래프 이론 문제
+큐를 이용해 문제의 조건의 맞는 경우를 빠지지 않고 찾는데 이용함
+"""
 import sys
 
 n = int(sys.stdin.readline().strip())
