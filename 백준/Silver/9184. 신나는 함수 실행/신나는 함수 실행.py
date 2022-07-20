@@ -1,5 +1,11 @@
+"""
+변수가 3개인 dp 문제
+함수 w의 값이 항상 0보다 큼을 이용해 메모지에이션을 이용한 하향식으로 풀이
+점화식과 기저조건이 문제에 주어졌으며 구현만 할 수 있다면 풀 수 있는 문제이다.
+"""
 import sys
-dp = [[[0 for _ in range(51)]for _ in range(51)]for _ in range(51)]
+R = range(51)
+dp = [[[0 for _ in R]for _ in R]for _ in R]
 
 
 def w(x, y, z):
