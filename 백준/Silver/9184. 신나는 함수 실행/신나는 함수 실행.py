@@ -13,23 +13,10 @@ def w(x, y, z):
     if dp[x][y][z]:
         return dp[x][y][z]
     if x < y < z:
-        if not dp[x][y][z-1]:
-            dp[x][y][z-1] = w(x, y, z-1)
-        if not dp[x][y-1][z-1]:
-            dp[x][y-1][z-1] = w(x, y-1, z-1)
-        if not dp[x][y-1][z]:
-            dp[x][y-1][z] = w(x, y-1, z)
-        return dp[x][y][z-1] + dp[x][y-1][z-1] - dp[x][y-1][z]
+        dp[x][y][z] = w(x, y, z-1) + w(x, y-1, z-1) - w(x, y-1, z)
     else:
-        if not dp[x-1][y][z]:
-            dp[x-1][y][z] = w(x-1, y, z)
-        if not dp[x-1][y-1][z]:
-            dp[x-1][y-1][z] = w(x-1, y-1, z)
-        if not dp[x-1][y][z-1]:
-            dp[x-1][y][z-1] = w(x-1, y, z-1)
-        if not dp[x-1][y-1][z-1]:
-            dp[x-1][y-1][z-1] = w(x-1, y-1, z-1)
-        return dp[x-1][y][z] + dp[x-1][y-1][z] + dp[x-1][y][z-1] - dp[x-1][y-1][z-1]
+        dp[x][y][z] = w(x-1, y, z) + w(x-1, y-1, z) + w(x-1, y, z-1) - w(x-1, y-1, z-1)
+    return dp[x][y][z]
 
 
 while True:
