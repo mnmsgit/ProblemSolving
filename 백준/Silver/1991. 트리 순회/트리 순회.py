@@ -1,3 +1,7 @@
+"""
+트리의 기초 적인 구현과 순회(traversal) 문제
+
+"""
 import sys
 
 
@@ -6,11 +10,6 @@ class Node:
         self.left = left
         self.right = right
         self.data = data
-
-
-class BinaryTree:
-    def __init__(self, root):
-        self.root = root
 
 
 def preorder(node):
@@ -49,4 +48,3 @@ print()
 inorder(tree["A"])
 print()
 postorder(tree["A"])
-
