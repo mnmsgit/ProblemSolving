@@ -1,3 +1,7 @@
+"""
+1. bfs를 이용해 그래프를 탐색하는 기초적인 문제 2.방문한 위치는 visted 뿐만 아니라 그래프도 0으로 바꿔 불필요하게 여러번 탐색하는 것 방지
+bfs를 이용했지만 dfs를 이용하는 것도 상관없을 듯함
+"""
 import sys
 from collections import deque
 N = int(sys.stdin.readline())
