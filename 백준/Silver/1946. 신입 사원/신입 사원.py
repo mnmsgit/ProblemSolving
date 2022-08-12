@@ -1,3 +1,6 @@
+"""
+1등 부터 n등까지 중복 없이 있기 때문에 서류 심사 결과 등수를 배열의 번호로 이용
+"""
 import sys
 
 T = int(sys.stdin.readline())
