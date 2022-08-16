@@ -1,23 +1,25 @@
-from sys import stdin, stdout
-n = stdin.readline()
-N = sorted(map(int,stdin.readline().split()))
-m = stdin.readline()
-M = map(int, stdin.readline().split())
+import sys
 
 
-def binary(l, N, start, end):
-    if start > end:
-        return 0
-    m = (start+end)//2
-    if l == N[m]:
-        return 1
-    elif l < N[m]:
-        return binary(l, N, start, m-1)
+def b_search(array, value, low, high):
+    if low > high:
+        return False
+    mid = (low + high) // 2
+    if array[mid] == value:
+        return True
+    elif array[mid] > value:
+        return b_search(array, value, low, mid-1)
     else:
-        return binary(l, N, m+1, end)
+        return b_search(array, value, mid+1, high)
 
 
-for l in M:
-    start = 0
-    end = len(N)-1
-    print(binary(l,N,start,end))
+N = int(input())
+arr = list(map(int, sys.stdin.readline().split()))
+arr.sort()
+M = int(input())
+ans = list(map(int, sys.stdin.readline().split()))
+for element in ans:
+    if b_search(arr, element, 0, N - 1):
+        print(1)
+    else:
+        print(0)
