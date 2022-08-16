@@ -1,3 +1,7 @@
+"""
+이진탐색(binary Search)를 이용한 기본문제
+구현을 해보는 문제
+"""
 import sys
 
 
