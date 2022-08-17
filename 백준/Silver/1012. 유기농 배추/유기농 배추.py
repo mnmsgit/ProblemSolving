@@ -1,3 +1,7 @@
+"""
+그래프를 활용한 탐색 기초문제
+bfs dfs 어느 것을 활용해도 가능함
+"""
 import sys
 from collections import deque
 
