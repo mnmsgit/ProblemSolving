@@ -1,3 +1,6 @@
+"""
+dp를 이용한 기본문제 풀이
+"""
 import sys
 N, M = map(int, sys.stdin.readline().split())
 arr = list(map(int, sys.stdin.readline().split()))
