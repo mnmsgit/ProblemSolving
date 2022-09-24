@@ -1,14 +1,19 @@
+"""
+수학문제
+주사위의 성질(마주보는 면이 정해져 있음)을 이용한 쉬운 공간문제이다.
+딱히 사용된 알고리즘적 기법은 없지만 구현도 중요하기에 연습해볼만 문제
+"""
 import sys
 
 
 def sum_space(size, dice_arr):
     ans = 0
-    if size > 1:
-        three, two = 4, (2*size-3)*4
-        one = size*size*5 - three*3 - two*2
-        ans += (one + two + three) * dice_arr[0]
-        ans += (two + three) * dice_arr[1]
-        ans += three * dice_arr[2]
+    space = size * size * 5
+    three, two = 4, (2*size-3)*4
+    one = space - three*3 - two*2
+    a = [one+two+three, two+three, three]
+    for i in range(3):
+        ans += a[i] * dice_arr[i]
     return ans
 
 
