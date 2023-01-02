@@ -1,20 +1,7 @@
-# 1149
-
-
-# case = [(0,1),(0,2),(1,0),(1,2),(2,0),(2,1)]
-# house_col = [-1 for i in range(N)]
-# for i in range(len(case)):
-#     cost = price[0][case[i][0]] + price[1][case[i][1]]
-#     house_col[0] = case[i][0]
-#     house_col[1] = case[i][1]
-#     for j in range(2, N-1):
-#         cur = 3-house_col[j-1]-house_col[j-2]
-#         house_col[j] = cur
-#         cost += price[j][cur]
-#     cost += min(price[N-1][3-house_col[N-2]-house_col[N-3]], price[N-1][house_col[N-3]])
-#     if cost < min_cost:
-#         min_cost = cost
-# print(min_cost)
+# dp 사용 이유: 1. 최소값 구하는 문제 2. 부르트포스 사용하기에 경우가 많음 => dp 고려
+# i 번째의 최솟값을 반복적으로 사용 + 최적 부분 구조를 구해야함 -> dp 사용 확신
+# dp 테이블이 1차원 배열이라고 가정하고 풀어서 헤멘 문제
+# dp 가 n차원이어도 n이 아주 크지 않으면 시간,공간복잡도 별로 안높다. 변수 개수 만큼 생각하는게 일반적
 
 
 import sys
