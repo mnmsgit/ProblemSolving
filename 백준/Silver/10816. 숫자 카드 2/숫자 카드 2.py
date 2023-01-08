@@ -1,5 +1,8 @@
 # 풀이 1: hashmap(dictionary)이용한 풀이 -> dictionary의 key에 대한 접근은 O(1)의 시간복잡도
-# 풀이 2: 이분 탐색을 이용한 풀이 -> O(logN)의 시간복잡도 but 중복된 값 때문에 단순히 찾는 것으로 끝나지 않음 -> 1. dict 사용(첫 풀이와 비슷) 2. collection의 Counter 사용(list.count는 시간복잡도 높아서 통과 불가)
+# 풀이 2: 이분 탐색을 이용한 풀이 -> O(logN)의 시간복잡도 but 중복된 값 때문에 단순히 찾는 것으로 끝나지 않음
+# -> 1. dict 사용(첫 풀이와 비슷) 2. collection의 Counter 사용(list.count는 시간복잡도 높아서 통과 불가)
+
+
 import sys
 
 N = int(sys.stdin.readline().strip())
