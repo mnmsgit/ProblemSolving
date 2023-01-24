@@ -13,7 +13,10 @@ for _ in range(T):
             dp[i][0] = dp[i-1][1] + item[0][i]
             dp[i][1] = dp[i-1][0] + item[1][i]
         else:
-            dp[i][0] = max(max(dp[i-2])+item[0][i],dp[i-1][1] + item[0][i])
-            dp[i][1] = max(max(dp[i - 2]) + item[1][i], dp[i - 1][0] + item[1][i])
+            dp[i][0] = max(dp[i-2][1], dp[i-1][1]) + item[0][i]
+            dp[i][1] = max(dp[i-2][0], dp[i-1][0]) + item[1][i]
+            # dp[i][0] = max(max(dp[i-2])+item[0][i],dp[i-1][1] + item[0][i])
+            # dp[i][1] = max(max(dp[i - 2]) + item[1][i], dp[i - 1][0] + item[1][i])
+
     print(max(dp[items-1]))
 
