@@ -1,10 +1,13 @@
+# BFS 알고리즘을 이용한 대표문제
+# 그래프 값이 -1(초기값)인 경우만 갱신
+
 import sys
 from collections import deque
 
 
 N, M, K, X = map(int, sys.stdin.readline().split())
 ans = []
-graph =[[]for i in range(N+1)]
+graph = [[]for i in range(N+1)]
 visited = [-1] * (N+1)
 
 
