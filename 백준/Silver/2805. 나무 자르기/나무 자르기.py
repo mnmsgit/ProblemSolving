@@ -13,10 +13,10 @@ while low <= high:
     for tree in trees:
         if tree > mid:
             cut += tree - mid
-    if cut >= M:
+    if cut < M:
+        high = mid - 1
+    else:
         result = mid
         low = mid + 1
-    else:
-        high = mid - 1
 print(result)
 
