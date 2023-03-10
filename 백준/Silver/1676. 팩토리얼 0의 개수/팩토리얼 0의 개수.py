@@ -1,3 +1,6 @@
+# 다이나믹 프로그래밍을 이용한 문제
+# 테이블 채우는 과정은 간단하지만 dp를 사용해야 한다는 생각이 들기까지 오랜 시간이 걸렸다.
+
 import sys
 N = int(sys.stdin.readline())
 dp = [0 for _ in range(N+1)]
