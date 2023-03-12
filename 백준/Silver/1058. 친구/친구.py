@@ -1,3 +1,6 @@
+# n의 개수가 작기 때문에 전체 탐색(프루트 포스)로 해결할 수 있는 문제
+# 이중 for 문으로도 n<=50 이므로 O(n**2)가 가능하기 때문에 graph 전체를 탐색 
+
 import sys
 N = int(sys.stdin.readline())
 
