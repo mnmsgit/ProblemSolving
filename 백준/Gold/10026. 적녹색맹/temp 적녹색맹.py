@@ -1,3 +1,8 @@
+"""
+bfs를 이용한 대표 문제
+방문처리를 먼저 하고 queue에 넣어서 pop했을 때 주변을 탐색하는 과정만 기억한다면 쉽게 풀 수 있는 문제
+"""
+
 import sys
 from collections import deque
 
@@ -76,4 +81,4 @@ for i in range(N):
             colorblind_bfs((i,j))
             c_blind +=1
 
-print(norm,c_blind)
+print(norm, c_blind)
