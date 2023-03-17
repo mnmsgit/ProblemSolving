@@ -1,3 +1,7 @@
+# bfs 이용한 응용 문제 풀이
+# 녹는 함수와 bfs를 분리 하여 생각
+# ISSUE:python 으로 하면 시간 초과 pypy3으로 하면 시간 초과에 안걸림
+# 해결 해야 하는 문제 인지는 모르겠음
 import sys
 from collections import deque
 
