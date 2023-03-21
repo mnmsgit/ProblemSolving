@@ -1,3 +1,5 @@
+# D&C 대표문제 하지만 재귀를 이용하지 않고 풀어봄 
+#재귀로 다시 풀어보기
 import sys
 N, r, c = map(int, input().split())
 
