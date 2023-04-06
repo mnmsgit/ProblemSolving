@@ -1,14 +1,21 @@
-"""
-dp를 이용한 기본적 문제
-dp[n]항상 답일 것이라는 편견때문에 오래 걸린 문제
-또한 test case가  N (1 ≤ N ≤ 1,000) 이므로 n2의 시간복잡도도 가능함.
-"""
-n = int(input())
-a = list(map(int, input().split()))
-dp = [0 for i in range(n)]
-for i in range(n):
-    for j in range(i):
-        if a[i] > a[j] and dp[i] < dp[j]:
-            dp[i] = dp[j]
-    dp[i] += 1
-print(max(dp))
+import sys
+
+N = int(sys.stdin.readline())
+
+arr = list(map(int,sys.stdin.readline().split()))
+arr.insert(0, 0)
+dp = [0] * (N+1)
+largest_num = [0] * (N+1)
+
+for i in range(1, N+1):
+    if largest_num[dp[i-1]] < arr[i]:
+        dp[i] = dp[i-1] + 1
+        largest_num[dp[i]] = arr[i]
+    else:
+        dp[i] = dp[i-1]
+        for k in range(1,dp[i-1]+1):
+            if largest_num[k] >= arr[i]:
+                largest_num[k] = arr[i]
+                break
+
+print(dp[N])
