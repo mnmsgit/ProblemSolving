@@ -1,5 +1,6 @@
 """
 최소힙 구현하는 기초적 문제
+heapq 라이브러리 이용
 """
 import heapq
 import sys
