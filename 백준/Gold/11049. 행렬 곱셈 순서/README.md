@@ -39,4 +39,4 @@
 
 
 # 참고자료
-![손필기](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1cbdb310-d350-4701-90ed-1eede0644556/Untitled.png)
+![cmm](https://user-images.githubusercontent.com/102347351/230821811-ecf51a27-ca3d-48f8-8e19-a53c5ca6d3b5.jpg)
