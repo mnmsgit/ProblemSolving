@@ -37,3 +37,6 @@
 
  <p>첫째 줄에 입력으로 주어진 행렬을 곱하는데 필요한 곱셈 연산의 최솟값을 출력한다. 정답은 2<sup>31</sup>-1 보다 작거나 같은 자연수이다. 또한, 최악의 순서로 연산해도 연산 횟수가 2<sup>31</sup>-1보다 작거나 같다.</p>
 
+
+# 참고자료
+![손필기](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1cbdb310-d350-4701-90ed-1eede0644556/Untitled.png)
