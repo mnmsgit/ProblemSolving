@@ -1,3 +1,4 @@
+# 단순구현
 import sys
 T = int(sys.stdin.readline())
 for _ in range(T):
