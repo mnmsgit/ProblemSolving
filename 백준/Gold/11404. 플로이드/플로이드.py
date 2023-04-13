@@ -27,3 +27,4 @@ for i in range(1,n+1):
         else:
             print(cost[i][j], end=" ")
     print()
+    
