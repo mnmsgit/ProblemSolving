@@ -1,3 +1,4 @@
+# Remind:1차원 배열로 풀기
 import sys
 
 
