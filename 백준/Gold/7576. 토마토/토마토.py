@@ -1,3 +1,5 @@
+# bfs 대표문제 
+# dx,dy 를 쓰는개념(선택적)등 정형화된 문제이므로 bfs대표 문제로 이용 (23.4.22)
 import sys
 from collections import deque
 
@@ -26,6 +28,7 @@ def bfs(start_arr):
                     queue.append((new_x, new_y))
 
 
+                    
 bfs(start)
 ans = -1
 anti_con = False
