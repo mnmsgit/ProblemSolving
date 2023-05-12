@@ -1,5 +1,7 @@
+# 모든 경로의 최단거리 이므로 플로이드-워셜 알고리즘 이용
+# 인접행렬 이용, 자신과 자신과의 거리는 0이고 간선이 양방향이므로 graph[a][b] = graph[b][a] = l 이다.
+
 import sys
-import heapq
 
 n, m, r = map(int, sys.stdin.readline().split())
 items = list(map(int,sys.stdin.readline().split()))
@@ -11,9 +13,9 @@ graph = [[INF for _ in range(n+1)]for i in range(n+1)]
 for i in range(1,n+1):
     graph[i][i] = 0
 for _ in range(r):
-    a,b,c = map(int,sys.stdin.readline().split())
-    graph[a][b] = c
-    graph[b][a] = c
+    a, b, l = map(int,sys.stdin.readline().split())
+    graph[a][b] = l
+    graph[b][a] = l
 
 for k in range(1,n+1):
     for i in range(1,n+1):
@@ -22,7 +24,7 @@ for k in range(1,n+1):
 
 ans =0
 for i in range(1,n+1):
-    part = 0
+    part = 0 # i 번 노드 에서의 아이템의 최대값
     for j in range(1,n+1):
         if graph[i][j] <= m:
             part += items[j]
