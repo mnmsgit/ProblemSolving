@@ -30,4 +30,3 @@ for i in range(1,n+1):
             part += items[j]
     ans = max(ans,part)
 print(ans)
-
