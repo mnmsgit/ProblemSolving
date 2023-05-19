@@ -1,3 +1,5 @@
+# 다이나믹 프로그래밍을 이용한 문제
+# 세로가 2칸 고정이므로 가로를 변수로 놓고 점화식을 세울 수 있음 
 import sys
 
 N = int(sys.stdin.readline())
