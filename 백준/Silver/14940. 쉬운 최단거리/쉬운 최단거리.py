@@ -1,3 +1,5 @@
+# 그래프 탐색 : bfs 이용한 최단 거리 문제
+# 전형적인 bfs 문제 이며 도달할 수 없는 공간과 시작점(그래프에서의 2)를 처리하는게 관건이었던 문제
 import sys
 from collections import deque
 n, m = map(int,sys.stdin.readline().split())
