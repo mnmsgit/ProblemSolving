@@ -1,4 +1,7 @@
-n = int(input())
+# backtracking을 이용한 n-queen 풀이
+# TODO : 1. Look-up table을 이용해 효율성 제고 가능
+import sys
+n = int(sys.stdin.readline())
 
 ans = 0
 row = [0] * n
