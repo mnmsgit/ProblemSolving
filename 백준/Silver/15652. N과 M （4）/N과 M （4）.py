@@ -1,4 +1,5 @@
-# backtracking 대표 문제 n,m(3)
+# backtracking 대표 문제 n,m(4)
+# python은 or 연산에서 앞의 연산이 true면 뒤의 booltype 확인 x (단축 평가, 대부분의 언어가 지원) -> index 오류 나지 않음
 import sys
 
 N, M = map(int, sys.stdin.readline().split())
