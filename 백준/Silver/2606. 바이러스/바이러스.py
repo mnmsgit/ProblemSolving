@@ -1,35 +1,38 @@
 """
 딕셔너리를 이용해 푸는 그래프 이론 문제
 큐를 이용해 문제의 조건의 맞는 경우를 빠지지 않고 찾는데 이용함
+
++
+23/6/29 재체점 issue로 수정
+dictionary 사용 시 get 내장함수 사용 하여 key error exception 방지 ,bfs 풀이에서 dfs 풀이로 바꿈(둘 다 가능)
 """
 import sys
+input = sys.stdin.readline
 
-n = int(sys.stdin.readline().strip())
-m = int(sys.stdin.readline().strip())
+N = int(input())
+pairs = int(input())
 graph = {}
-for _ in range(m):
-    line = sys.stdin.readline().strip().split()
-    line = list(map(int, line))
-    if len(line) == 2:
-        if line[0] in graph:
-            graph[line[0]].append(line[1])
-        else:
-            graph[line[0]] = [line[1]]
-        if line[1] in graph:
-            graph[line[1]].append(line[0])
-        else:
-            graph[line[1]] = [line[0]]
-    else:
-        graph[line[0]] = []
+visited = [False for i in range(N+1)]
 
-qu = []
-ans = set()
-qu.append(1)
-ans.add(1)
-while qu:
-    p = qu.pop(0)
-    for element in graph[p]:
-        if element not in ans:
-            qu.append(element)
-            ans.add(element)
-print(len(ans)-1)
+for i in range(pairs):
+    a, b = map(int, input().split())
+    # key error를 피하기 위해 dictionary의 get 메서드 사용
+    graph[a] = graph.get(a, []) + [b]
+    graph[b] = graph.get(b, []) + [a]
+
+ans = 0
+visited[1] = True
+# stack for dfs
+stack = [1]
+
+while stack:
+    node = stack.pop()
+    neighbors = graph.get(node)
+    if neighbors is not None:
+        for neighbor in neighbors:
+            if not visited[neighbor]:
+                ans += 1
+                stack.append(neighbor)
+                visited[neighbor] = True
+
+print(ans)
