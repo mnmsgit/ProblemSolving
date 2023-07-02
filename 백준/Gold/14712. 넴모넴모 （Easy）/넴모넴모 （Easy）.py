@@ -1,3 +1,6 @@
+# 백트래킹 대표 문제 
+# 각 칸을 노드로 보고 왼쪽, 위, 왼쪽 위가 채워져 있지 않으면 담고 진행 + 담지 않고 진행
+# 모두 채워진 경우 담지 않고 진행
 import sys
 N, M = map(int, sys.stdin.readline().split())
 
