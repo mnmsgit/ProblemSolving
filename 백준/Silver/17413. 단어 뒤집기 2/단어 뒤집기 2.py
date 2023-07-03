@@ -1,4 +1,3 @@
-import sys
 """
 문자열 문제 풀이
 경우 3가지
@@ -9,6 +8,8 @@ import sys
 [::-1] 로 쉽게 문자열 reverse 가능 
 """
 # 개행 문자 입역 문제로 strip 사용
+import sys
+
 line = sys.stdin.readline().strip()
 output = ""
 
