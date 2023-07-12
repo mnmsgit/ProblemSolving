@@ -1,4 +1,4 @@
-# 단순구현
+# 단순구현, dp로 개선 가능
 import sys
 T = int(sys.stdin.readline())
 for _ in range(T):
