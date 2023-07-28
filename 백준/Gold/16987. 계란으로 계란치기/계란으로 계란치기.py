@@ -1,7 +1,13 @@
-def BackTracking(start):
+# 백트래킹을 이용한 문제
+# 백트래킹을 사용 해야함을 빠르게 알 수 있었지만 구현이 오래걸린 문제(문제 조건을 놓치지 말아야 한다!)
+# 1. backtraking 함수 인자 정하기
+# 2. 종료조건
+# 3. dfs탐색 시 로직과 백트래킹 완료 후 원상복구
 
+
+def BackTracking(start):
     global ans
-    if start==N:
+    if start == N:
         broken_total=0
         for i in range(N):
             if egg[i][0]<=0:
