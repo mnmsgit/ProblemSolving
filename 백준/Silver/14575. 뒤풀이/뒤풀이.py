@@ -17,8 +17,6 @@ if sum(L) > T or sum(R) < T:
 low = max(L)
 high = max(R)
 
-
-range_set.sort(key=lambda x : x[0])
 ans = high
 while low < high:
     mid = (low + high) // 2
