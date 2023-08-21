@@ -1,3 +1,6 @@
+# 조건이 추가된 이진탐색
+# 이진탐색을 써야 한다고 생각한 계기 : 1. 범위 설정하는 문제 2, input 범위가 매우 큼(1 ≤ Li ≤ Ri ≤ 10^^6)
+#
 import sys
 
 N, T = map(int,sys.stdin.readline().split())
