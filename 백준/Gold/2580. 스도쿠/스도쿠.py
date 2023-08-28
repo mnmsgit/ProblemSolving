@@ -1,3 +1,6 @@
+# 백트래킹 연습문제
+# 기존 queue로 구현했으나 pop해버리면 이전 상태로 복구하기 어려운 문제가 있어 index로 접근함
+# 백트래킹 재귀함수 고려해야할 점 1. 종료조건 2. 방문 처리 -> dfs -> 종료조건 만족 못하는 경우 방문 처리의 역연산
 import sys
 input = sys.stdin.readline
 
@@ -23,9 +26,9 @@ def backtracking(idx):
             graph[x][y] = candidate
             backtracking(idx+1)
             graph[x][y] = 0
-            row[x][candidate] = False
-            col[y][candidate] = False
             square[(x//3)*3 + (y//3)][candidate] = False
+            col[y][candidate] = False
+            row[x][candidate] = False
 
 
 arr = []
