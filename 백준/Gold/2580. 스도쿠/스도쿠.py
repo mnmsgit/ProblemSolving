@@ -1,5 +1,4 @@
 import sys
-from collections import deque
 input = sys.stdin.readline
 
 graph = [[]for i in range(9)]
@@ -12,10 +11,9 @@ def backtracking(idx):
     global graph
     global arr
     if idx == len(arr):
-        for i in range(9):
-            print(*graph[i])
-        exit(0)
-        return
+        for g in graph:
+            print(" ".join(map(str, g)))
+        sys.exit(0)
     x, y = arr[idx]
     for candidate in range(1,10):
         if not row[x][candidate] and not col[y][candidate] and not square[(x//3)*3 + (y//3)][candidate]:
