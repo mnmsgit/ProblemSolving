@@ -1,3 +1,6 @@
+# 부분합 문제의 변형
+# %N 와 같은 module 을 사용해도 되지만 house를 그대로 확장하는 방식을 사용
+# 항상 경계값 부호 조심!
 import sys
 
 T = int(sys.stdin.readline())
