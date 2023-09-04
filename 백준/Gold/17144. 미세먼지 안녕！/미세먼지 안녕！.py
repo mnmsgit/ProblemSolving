@@ -49,11 +49,13 @@ def conditioning():
     # up
     for i in range(clockwise+1, R-1):
         graph[i][0] = graph[i+1][0]
-
+    # left
     for i in range(C-1):
         graph[R-1][i] = graph[R-1][i+1]
-    for i in reversed(range(clockwise+1,R)):
+    # down
+    for i in reversed(range(clockwise+1, R)):
         graph[i][C-1] = graph[i-1][C-1]
+    # right
     for i in reversed(range(2, C)):
         graph[clockwise][i] = graph[clockwise][i-1]
     graph[clockwise][1] = 0
