@@ -1,21 +1,27 @@
-li, m = [], []
-i = 0
+
+blank = [0] * 180
+lines = []
 
 while True:
     try:
         line = input().split()
-        li.append(line)
-        for i, l in enumerate(line):
-            if i < len(m):
-                m[i] = max(m[i], len(l))
-            else:
-                m.append(len(l))
+        lines.append(line)
+        i = 0
+        for token in line:
+            blank[i] = max(blank[i],len(token))
+            i += 1
     except:
         break
 
-for i, l in enumerate(li):
-    for j, w in enumerate(l):
-        li[i][j] = w + (m[j] - len(w)) * ' '
+for line in lines:
+    i = 0
+    li = []
+    for token in line:
+        li.append(token)
+        for _ in range(blank[i] - len(token)):
+            li.append(" ")
+        li.append(" ")
+        i += 1
+    s = "".join(li)
+    print(s.rstrip())
 
-for l in li:
-    print(' '.join(l).rstrip())
