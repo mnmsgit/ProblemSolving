@@ -9,6 +9,7 @@ boxs.sort(reverse=True)
 
 if boxs[0] > limits[0]:
     print(-1)
+    # 종료조건 추가
     exit(0)
 
 time = 0
