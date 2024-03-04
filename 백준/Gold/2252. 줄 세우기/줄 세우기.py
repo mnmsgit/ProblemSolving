@@ -24,5 +24,3 @@ while queue:
             queue.append(next_node)
 
 print(*ans)
-
-
