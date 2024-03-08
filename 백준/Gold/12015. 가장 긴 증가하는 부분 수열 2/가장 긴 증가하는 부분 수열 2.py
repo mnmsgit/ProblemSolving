@@ -7,14 +7,12 @@ A = list(map(int, sys.stdin.readline().split()))
 stack = [A[0]]
 
 
-def b_s(arr,element):
+def b_s(arr, element):
     low = 0
     high = len(arr)-1
     while low < high:
         mid = (low + high) // 2
-        if arr[mid] == element:
-            return mid
-        elif arr[mid] < element:
+        if arr[mid] < element:
             low = mid + 1
         else:
             high = mid
