@@ -28,4 +28,3 @@ for aa in range(T):
                 queue.append(next_node)
     W = int(sys.stdin.readline())
     print(distance[W])
-
