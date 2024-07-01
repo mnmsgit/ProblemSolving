@@ -1,0 +1,48 @@
+# -*- coding: utf-8 -*-
+# UTF-8 encoding when using korean
+import sys
+import re
+def calculate_mul(equation : str) -> int:
+	nums_str = equation.split("*")
+	# print("nums_str", nums_str)
+	if len(nums_str) == 1:
+		return int(equation)
+	summation = 1
+	for num in nums_str:
+		summation *= int(num)
+	return summation
+	return 1
+
+	
+
+
+def calculate_eq(equation : str) -> int:
+	plus_or_minus= []
+	for i in range(len(equation)):
+		if equation[i] in ["+","-"]:
+			plus_or_minus.append((i,equation[i]))
+			
+	ans = calculate_mul(equation[0:plus_or_minus[0][0]])
+	for i in range(len(plus_or_minus)-1):
+		index, operator = plus_or_minus[i]
+		next_index = plus_or_minus[i+1][0]
+		if operator == "+":
+			ans += calculate_mul(equation[index+1:next_index])
+		elif operator == "-":
+			ans -=  calculate_mul(equation[index+1:next_index])
+	last_idx, last_op = plus_or_minus[len(plus_or_minus)-1]
+	
+	if last_op == "+":
+		ans += calculate_mul(equation[last_idx+1:len(equation)])
+	elif last_op == "-":
+		ans -= calculate_mul(equation[last_idx+1:len(equation)])
+	return ans 
+		
+		
+equations = sys.stdin.readline().split()
+
+max_ans = -10**15
+for equation in equations:
+	max_ans = max(max_ans,calculate_eq(equation))
+print(max_ans)
+	
