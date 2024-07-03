@@ -1,0 +1,10 @@
+import sys
+
+N, K = sys.stdin.readline().split()
+N = int(N)
+a_list = sys.stdin.readline().split()
+ans = 0
+for a_i in a_list:
+	if K not in a_i:
+		ans += 1
+print(ans)
