@@ -1,0 +1,15 @@
+import sys
+
+N, K = map(int,sys.stdin.readline().split())
+
+arr = list(map(int,sys.stdin.readline().split()))
+
+arr_bin =[]
+
+for element in arr:
+	one_count = bin(element).count("1")
+	arr_bin.append((one_count,element))
+	
+arr_bin.sort(reverse=True)
+
+print(arr_bin[K-1][1])
